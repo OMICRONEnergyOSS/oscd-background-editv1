@@ -65,13 +65,13 @@ jobs:
       - name: Setup Node Environment
         run: npm ci
 
-      - name: Generate Documentation
-        run: npm run doc
+      - name: Build plugin bundle
+        run: npm run bundle
 
-      - name: Upload documentation artifact
+      - name: Upload bundle
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./doc
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
