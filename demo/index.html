@@ -1,0 +1,74 @@
+<title>oscd-open Demo</title>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500&display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Material+Icons&display=block"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  rel="stylesheet"
+/>
+<oscd-shell></oscd-shell>
+
+<script type="module">
+  import '@omicronenergy/oscd-shell/oscd-shell.js';
+
+  const plugins = {
+    menu: [
+      {
+        name: 'Open File',
+        translations: { de: 'Datei öffnen' },
+        icon: 'folder_open',
+        active: true,
+        src: 'https://openenergytools.github.io/oscd-open/oscd-open.js',
+      },
+      {
+        name: 'Save File',
+        translations: { de: 'Datei öffnen' },
+        icon: 'save',
+        active: true,
+        src: 'https://openenergytools.github.io/oscd-save/oscd-save.js',
+      },
+    ],
+    background: [
+      {
+        name: 'Edit V1 Shim',
+        src: '../dist/oscd-background-editv1.js',
+      },
+    ],
+    editor: [
+      {
+        name: 'Design SLD',
+        translations: {
+          de: 'Designer',
+        },
+        icon: 'add_box',
+        active: true,
+        requireDoc: true,
+        src: 'https://openenergytools.github.io/oscd-designer/oscd-designer.js',
+      },
+    ],
+  };
+
+  const editor = document.querySelector('oscd-shell');
+  const params = new URL(document.location).searchParams;
+  for (const [name, value] of params) {
+    editor.setAttribute(name, value);
+  }
+  editor.plugins = plugins;
+</script>
+<style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+</style>

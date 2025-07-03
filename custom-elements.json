@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "oscd-background-editv1.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdMenuOpen",
+          "members": [
+            {
+              "kind": "field",
+              "name": "xmlEditor",
+              "type": {
+                "text": "XMLEditor"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "editor",
+              "type": {
+                "text": "XMLEditor"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "oscd-background-editv1",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "OscdMenuOpen",
+            "module": "oscd-background-editv1.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "oscd-menu-open.spec.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-background-editv1",
+          "declaration": {
+            "name": "OscdMenuOpen",
+            "module": "/oscd-background-editv1.js"
+          }
+        }
+      ]
+    }
+  ]
+}
