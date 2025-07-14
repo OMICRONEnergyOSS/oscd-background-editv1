@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.4...oscd-background-editv1-v0.0.5) (2025-07-14)
+
+
+### Bug Fixes
+
+* correct broken dev-server config ([da521fc](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/da521fc47459fdee4b92eda46bd6952102316ef9))
+
 ## [0.0.4](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.3...oscd-background-editv1-v0.0.4) (2025-07-14)
 
 
