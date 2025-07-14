@@ -2,7 +2,6 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
 import fs from 'fs';
-import path from 'path';
 
 const tsconfig = JSON.parse(fs.readFileSync('./tsconfig.json', 'utf8'));
 const demoTsconfig = {
