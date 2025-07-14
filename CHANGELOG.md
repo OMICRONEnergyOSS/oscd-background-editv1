@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.6](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.5...oscd-background-editv1-v0.0.6) (2025-07-14)
+
+
+### Features
+
+* switch to using plugin: oscd-menu-open ([f920c10](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/f920c10862af0f5c38098820f9f0776750df25b3))
+
+
+### Bug Fixes
+
+* pkg-lock out of sync + update all deps ([01aaf74](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/01aaf741a84fa565a05787709542e9b6843c132a))
+
 ## [0.0.5](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.4...oscd-background-editv1-v0.0.5) (2025-07-14)
 
 
