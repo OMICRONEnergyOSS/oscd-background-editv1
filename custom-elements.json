@@ -28,14 +28,6 @@
           "members": [
             {
               "kind": "field",
-              "name": "xmlEditor",
-              "type": {
-                "text": "XMLEditor"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
               "name": "editor",
               "type": {
                 "text": "XMLEditor"
@@ -58,6 +50,24 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/block-navigation.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/prettify.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/sorter.js",
+      "declarations": [],
+      "exports": []
     }
   ]
 }

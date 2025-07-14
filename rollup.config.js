@@ -1,6 +1,14 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import copy from 'rollup-plugin-copy';
+import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
+import fs from 'fs';
+import path from 'path';
+
+const tsconfig = JSON.parse(fs.readFileSync('./tsconfig.json', 'utf8'));
+const demoTsconfig = {
+  ...tsconfig,
+  compilerOptions: { ...tsconfig.compilerOptions, outDir: 'dist/demo' },
+};
 
 export default [
   {
@@ -17,15 +25,22 @@ export default [
       /** Resolve bare module imports */
       nodeResolve(),
       typescript(),
-      copy({
-        targets: [
-          { src: 'demo/index.html', dest: 'dist/demo' },
-          { src: 'demo/*.js', dest: 'dist/demo' },
-          // Add more patterns if you have more assets
-        ],
-        verbose: true,
-        flatten: false,
-      }),
     ],
+  },
+  {
+    input: 'demo/index.html',
+    plugins: [
+      html({
+        input: 'demo/index.html',
+        minify: true,
+      }),
+      nodeResolve(),
+      typescript(demoTsconfig),
+    ],
+    output: {
+      dir: 'dist/demo',
+      format: 'es',
+      sourcemap: true,
+    },
   },
 ];
