@@ -1,6 +1,6 @@
 {
   "name": "@omicronenergy/oscd-background-editv1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "OpenSCD background Plugin for supporting Edit V1 events (oscd-edit). This provides backward compatibility for plugins still relying on Edit V1 events in OpenSCD.",
   "type": "module",
   "exports": {
