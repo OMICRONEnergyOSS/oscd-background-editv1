@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.3...oscd-background-editv1-v0.0.4) (2025-07-14)
+
+
+### Bug Fixes
+
+* correct plugin path in index.html ([f608080](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/f6080808da8dc0bdc53e07ceac7dc842659c49c5))
+
 ## [0.0.3](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.2...oscd-background-editv1-v0.0.3) (2025-07-14)
 
 
