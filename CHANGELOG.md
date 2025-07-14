@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.2...oscd-background-editv1-v0.0.3) (2025-07-14)
+
+
+### Bug Fixes
+
+* deployed bundle should run on gh-pages ([ca3e855](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/ca3e85592ad01c3fff15fe5f5900c8b7be5a17d5))
+
 ## [0.0.2](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.1...oscd-background-editv1-v0.0.2) (2025-07-11)
 
 
