@@ -59,6 +59,15 @@
     editor.setAttribute(name, value);
   }
   editor.plugins = plugins;
+  const sample = new DOMParser().parseFromString(
+    '<SCL><Substation name="AA1"></Substation></SCL>',
+    'application/xml',
+  );
+  editor.docs['sample.scd'] = new DOMParser().parseFromString(
+    sample,
+    'application/xml',
+  );
+  editor.docName = 'sample.scd';
 </script>
 <style>
   html,

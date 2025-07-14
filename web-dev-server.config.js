@@ -5,7 +5,8 @@
 const hmr = process.argv.includes('--hmr');
 
 export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
-  open: '/dist/demo/',
+  rootDir: 'dist',
+  open: 'demo/index.html',
   /** Use regular watch mode if HMR is not enabled. */
   watch: !hmr,
   /** Resolve bare module imports */
@@ -17,7 +18,7 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   // esbuildTarget: 'auto'
 
   /** Set appIndex to enable SPA routing */
-  // appIndex: 'demo/index.html',
+  // appIndex: '/demo/index.html',
 
   plugins: [
     /** Use Hot Module Replacement by uncommenting. Requires @open-wc/dev-server-hmr plugin */
