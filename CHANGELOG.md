@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.6...oscd-background-editv1-v0.0.7) (2026-03-09)
+
+
+### Bug Fixes
+
+* update all deps & switch to @openscd/oscd-(api+editor) ([1384c68](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/commit/1384c68d0a4c08026e7f3c3d255d8f9fd54543da))
+
 ## [0.0.6](https://github.com/OMICRONEnergyOSS/oscd-background-editv1/compare/oscd-background-editv1-v0.0.5...oscd-background-editv1-v0.0.6) (2025-07-14)
 
 
