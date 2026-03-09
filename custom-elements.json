@@ -4,22 +4,22 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "oscd-background-editv1.spec.ts",
+      "path": "src/oscd-background-editv1.spec.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "custom-element-definition",
           "name": "oscd-background-editv1",
           "declaration": {
-            "name": "OscdMenuOpen",
-            "module": "/oscd-background-editv1.js"
+            "name": "OscdBackgroundEditV1",
+            "module": "/src/oscd-background-editv1.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "oscd-background-editv1.ts",
+      "path": "src/oscd-background-editv1.ts",
       "declarations": [
         {
           "kind": "class",
@@ -37,6 +37,7 @@
           "superclass": {
             "name": "HTMLElement"
           },
+          "tagName": "oscd-background-editv1",
           "customElement": true
         }
       ],
@@ -46,7 +47,7 @@
           "name": "default",
           "declaration": {
             "name": "OscdBackgroundEditV1",
-            "module": "oscd-background-editv1.ts"
+            "module": "src/oscd-background-editv1.ts"
           }
         }
       ]

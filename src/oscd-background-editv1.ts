@@ -1,6 +1,6 @@
-import { EditEvent } from '@omicronenergy/oscd-api';
-import { convertEdit } from '@omicronenergy/oscd-api/utils.js';
-import { XMLEditor } from '@omicronenergy/oscd-editor';
+import { EditEvent } from '@openscd/oscd-api';
+import { convertEdit } from '@openscd/oscd-api/utils.js';
+import { XMLEditor } from '@openscd/oscd-editor';
 
 export default class OscdBackgroundEditV1 extends HTMLElement {
   editor!: XMLEditor;

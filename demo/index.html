@@ -11,69 +11,80 @@
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
   rel="stylesheet"
 />
+
 <oscd-shell></oscd-shell>
 
 <script type="module">
-  import '@omicronenergy/oscd-shell/oscd-shell.js';
+  import '@webcomponents/scoped-custom-element-registry';
+  (async function () {
+    await import('https://omicronenergyoss.github.io/oscd-shell/oscd-shell.js');
 
-  const plugins = {
-    menu: [
-      {
-        name: 'Open File',
-        translations: { de: 'Datei öffnen' },
-        icon: 'folder_open',
-        active: true,
-        src: 'https://omicronenergyoss.github.io/oscd-menu-open/oscd-menu-open.js',
-      },
-      {
-        name: 'Save File',
-        translations: { de: 'Datei öffnen' },
-        icon: 'save',
-        active: true,
-        src: 'https://openenergytools.github.io/oscd-save/oscd-save.js',
-      },
-    ],
-    background: [
-      {
-        name: 'Edit V1 Shim',
-        src: '../oscd-background-editv1.js',
-      },
-    ],
-    editor: [
-      {
-        name: 'Design SLD',
-        translations: {
-          de: 'Designer',
+    const { default: OscdBackgroundEditV1 } =
+      await import('@omicronenergy/oscd-background-editv1');
+
+    const oscdShell = document.querySelector('oscd-shell');
+    const params = new URL(document.location).searchParams;
+    for (const [name, value] of params) {
+      oscdShell.setAttribute(name, value);
+    }
+
+    const sample = new DOMParser().parseFromString(
+      '<SCL><Substation name="AA1"></Substation></SCL>',
+      'application/xml',
+    );
+    oscdShell.docs['sample.scd'] = new DOMParser().parseFromString(
+      sample,
+      'application/xml',
+    );
+    oscdShell.docName = 'sample.scd';
+
+    oscdShell.registry.define('oscd-background-editv1', OscdBackgroundEditV1);
+
+    oscdShell.plugins = {
+      menu: [
+        {
+          name: 'Open File',
+          translations: { de: 'Datei öffnen' },
+          icon: 'folder_open',
+          active: true,
+          src: 'https://omicronenergyoss.github.io/oscd-menu-open/oscd-menu-open.js',
         },
-        icon: 'add_box',
-        active: true,
-        requireDoc: true,
-        src: 'https://openenergytools.github.io/oscd-designer/oscd-designer.js',
-      },
-    ],
-  };
-
-  const editor = document.querySelector('oscd-shell');
-  const params = new URL(document.location).searchParams;
-  for (const [name, value] of params) {
-    editor.setAttribute(name, value);
-  }
-  editor.plugins = plugins;
-  const sample = new DOMParser().parseFromString(
-    '<SCL><Substation name="AA1"></Substation></SCL>',
-    'application/xml',
-  );
-  editor.docs['sample.scd'] = new DOMParser().parseFromString(
-    sample,
-    'application/xml',
-  );
-  editor.docName = 'sample.scd';
+        {
+          name: 'Save File',
+          translations: { de: 'Datei speichern' },
+          icon: 'save',
+          active: true,
+          src: 'https://omicronenergyoss.github.io/oscd-menu-save/oscd-menu-save.js',
+        },
+      ],
+      background: [
+        {
+          name: 'Edit V1 Shim',
+          icon: 'none',
+          tagName: 'oscd-background-editv1',
+        },
+      ],
+      editor: [
+        {
+          name: 'Design SLD',
+          translations: {
+            de: 'Designer',
+          },
+          icon: 'add_box',
+          active: true,
+          requireDoc: true,
+          src: 'https://omicronenergyoss.github.io/oscd-editor-sld/oscd-editor-sld.js',
+        },
+      ],
+    };
+  })();
 </script>
 <style>
   html,
   body {
     width: 100%;
     height: 100%;
+    background-color: var(--oscd-base3);
   }
 
   * {

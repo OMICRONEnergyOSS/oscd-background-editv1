@@ -1,17 +1,16 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import { SinonSpy, spy } from 'sinon';
 
-import OscdMenuOpen from './oscd-background-editv1.js';
+import { XMLEditor } from '@openscd/oscd-editor';
+import { isEdit, isEditV2 } from '@openscd/oscd-api/utils.js';
 import OscdBackgroundEditV1 from './oscd-background-editv1.js';
-import { XMLEditor } from '@omicronenergy/oscd-editor';
-import { isEdit, isEditV2 } from '@omicronenergy/oscd-api/utils.js';
 
 const doc = new DOMParser().parseFromString(
   '<SCL><Substation name="AA1"></Substation></SCL>',
   'application/xml',
 );
 
-customElements.define('oscd-background-editv1', OscdMenuOpen);
+customElements.define('oscd-background-editv1', OscdBackgroundEditV1);
 
 describe('oscd-background-editv1', () => {
   let plugin: OscdBackgroundEditV1;

@@ -24,7 +24,7 @@ export default [
     'plugin:@typescript-eslint/recommended',
   ),
   {
-    ignores: ['dist/', 'node_modules', 'coverage', 'doc'],
+    ignores: ['plugins/', 'dist/', 'node_modules', 'coverage', 'doc'],
   },
 
   {
@@ -69,6 +69,7 @@ export default [
         'error',
         {
           devDependencies: [
+            'demo/index.html',
             '**/*.test.ts',
             '**/*.spec.ts',
             'eslint.config.js',
@@ -78,7 +79,6 @@ export default [
           ],
         },
       ],
-      curly: ['error', 'all'],
       'import-x/no-unresolved': 'off',
       'import-x/extensions': [
         'error',
@@ -90,4 +90,15 @@ export default [
     },
   },
   eslintPluginPrettierRecommended,
+  {
+    files: ['**/*.spec.ts', '**/*.test.ts'],
+    rules: {
+      '@typescript-eslint/no-unused-expressions': 'off',
+    },
+  },
+  {
+    rules: {
+      curly: ['error', 'all'],
+    },
+  },
 ];
